@@ -4,9 +4,7 @@ import java.io.*;
 
 class Games {
 	static Random random = new Random();
-	// static Scanner in = new Scanner(System.in);
 	static String name;
-	// static int number;
 	static int guess;
 	
 	public Games() {

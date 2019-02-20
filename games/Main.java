@@ -14,32 +14,16 @@ class Main extends Games {
 			"Choose a game: ");
 		
 		int choice = in.nextInt();
-		// System.out.println(fortune_teller());
-		
-		/* 
-if (choice == 1) {
-			output = poem();
-		} else if (choice == 2) {
-			output = guessing_game();
-		} else if (choice == 3) {
-			output = fortune_teller();
-		} else if (choice == 4) {
-			output = madlibs();
-		} else {
-			System.out.println("You've entered an invalid choice.\nChoose again: ");
-			choice = in.nextInt();
-		}
-		
-		System.out.println(output);
- */
 		
 		switch (choice){
+			// Poems Game
 			case 1:
 				System.out.println("What is your name? ");
 				set_name();
 				System.out.print(poem());
 				System.out.println("\n");
 				break;
+			// Guessing Game
 			case 2:
 				System.out.print("Enter your guess: ");
 				set_guess();
@@ -47,12 +31,16 @@ if (choice == 1) {
 				System.out.print(guessing_game());
 				System.out.println("\n");
 				break;
+			// Fortune Teller Game
 			case 3:
-				 System.out.print("Enter your name: ");
-				 set_name();
-				 System.out.print(fortune_teller());
-				 System.out.println("\n");
+				System.out.print("Enter your name: ");
+				set_name();
+				System.out.print(fortune_teller());
+				System.out.println("\n");
+				break;
+			// Madlibs Game
 			case 4:
+				for (int i = 0; i < ask.length)
 				break;
 			default:
 				System.out.println("You've entered an invalid choice.\nChoose again: ");

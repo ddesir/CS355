@@ -40,7 +40,20 @@ class Main extends Games {
 				break;
 			// Madlibs Game
 			case 4:
-				for (int i = 0; i < ask.length)
+				String [] ask = {"Enter an adjective: ", "Enter a plural noun: ",
+				"Enter a number: ", "Enter a plural noun: ", "Enter an adjective: ",
+				"Enter an adverb: ", "Enter an adjective: ", "Enter a noun: ",
+				"Enter a verb: ", "Enter a body part: "};
+				
+				String[] response = new String[ask.length];
+				
+				for (int i = 0; i < ask.length; i++) {
+					System.out.println(ask[i]);
+					response[i] = in.next();
+				}
+				
+				System.out.print(madlibs(response));
+				System.out.println("\n");
 				break;
 			default:
 				System.out.println("You've entered an invalid choice.\nChoose again: ");

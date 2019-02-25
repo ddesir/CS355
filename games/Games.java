@@ -57,7 +57,7 @@ class Games {
       "Life doesn't stop for anybody."
     };
 
-    int number = (int)(random.nextInt(fortunes.length - 1));
+    int number = (int)(random.nextInt(fortunes.length));
     
     return "Here is your fortune " + get_name() + ":\n" + fortunes[number];
 	}

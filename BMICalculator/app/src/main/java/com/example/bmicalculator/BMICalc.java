@@ -15,9 +15,7 @@ public class BMICalc {
         weight = y;
     } */
 
-    public static float calcultateBMI(float x, float y) {
-        Float height = Float.parseFloat(x);
-        Float weight = Float.parseFloat(y);
+    public static float calcultateBMI(float height, float weight) {
         return Math.pow(height, 2)/weight;
     }
 }

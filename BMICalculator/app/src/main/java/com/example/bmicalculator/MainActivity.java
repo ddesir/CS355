@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent (this, DisplayMessageActivity.class);
         EditText ht = (EditText) findViewById(R.id.editText);
         EditText wt = (EditText) findViewById(R.id.editText2);
-        float height = ht.getText().toString();
-        float weight = wt.getText().toString();
+        float height = Float.parseFloat(ht.getText().toString());
+        float weight = Float.parseFloat(wt.getText().toString());
         String message = BMICalc.calcultateBMI(height, weight);
         intent.putExtra("msg1", message);
         startActivity(intent);

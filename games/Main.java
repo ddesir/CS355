@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main extends Games {
+class Main {
 	static Scanner in = new Scanner(System.in);
 	
 	public static void main(String [] args) {
@@ -12,30 +12,31 @@ class Main extends Games {
 			"3 - Fortune Teller\n" +
 			"4 - MadLibs\n\n" +
 			"Choose a game: ");
-		
-		int choice = in.nextInt();
+			
+		int choice = in.nextInt();		// int does not consume the last new line char
+		in.nextLine();								// Workaround: Catches new line char
 		
 		switch (choice){
 			// Poems Game
 			case 1:
 				System.out.println("What is your name? ");
-				set_name();
-				System.out.print(poem());
+				String name = in.nextLine();
+				System.out.print(Games.poem(name));
 				System.out.println("\n");
 				break;
 			// Guessing Game
 			case 2:
 				System.out.print("Enter your guess: ");
-				set_guess();
+				int guess = in.nextInt();
     		
-				System.out.print(guessing_game());
+				System.out.print(Games.guessing_game(guess));
 				System.out.println("\n");
 				break;
 			// Fortune Teller Game
 			case 3:
 				System.out.print("Enter your name: ");
-				set_name();
-				System.out.print(fortune_teller());
+				String name2 = in.nextLine();
+				System.out.print(Games.fortune_teller(name2));
 				System.out.println("\n");
 				break;
 			// Madlibs Game
@@ -52,7 +53,7 @@ class Main extends Games {
 					response[i] = in.next();
 				}
 				
-				System.out.print(madlibs(response));
+				System.out.print(Games.madlibs(response));
 				System.out.println("\n");
 				break;
 			default:

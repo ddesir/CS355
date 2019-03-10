@@ -14,7 +14,7 @@ public class FortuneTeller {
       "Life doesn't stop for anybody."
     };
 
-    int index = (int)(random.nextInt(fortunes.length - 1));
+    int index = (int)(random.nextInt(fortunes.length));
     System.out.print("Enter your name: ");
     String name = scanner.nextLine();
     

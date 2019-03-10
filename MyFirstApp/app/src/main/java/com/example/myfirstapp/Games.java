@@ -4,54 +4,33 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Games {
-    private static Random random = new Random();
-    private static String name;
-    private static int guess;
+    static Random random = new Random();
 
     public Games() {
 
     }
 
-    private static String get_name() {
-        return name;
-    }
-
-    private static void set_name(String userinput) {
-        /* Scanner in = new Scanner(System.in);
-        name = in.nextLine(); */
-        name = userinput;
-    }
-
-    private static void set_guess() {
-        Scanner in = new Scanner(System.in);
-        guess = in.nextInt();
-    }
-
-    private static int get_guess() {
-        return guess;
-    }
-
     // Poem
-    public static String poem() {
-        return "My student " + get_name() + ",\nstanding proud,\nis a fine example for the crowd.";
+    public static String poem(String name) {
+        return "My student " + name + ",\nstanding proud,\nis a fine example for the crowd.";
     }
 
     // Guessing Game
-    public static String guessing_game() {
+    public static String guessing_game(int guess) {
+        Scanner in = new Scanner(System.in);
         int number = (int)(random.nextInt(100 + 1));
-        guess = get_guess();
 
-        while (get_guess() != number) {
+        while (guess != number) {
             String not_equal = (guess > number) ? "Guess was too high" : "Guess was too low";
             System.out.print(not_equal + "\nGuess again: ");
-            set_guess();
+            guess = in.nextInt();
         }
 
         return "Correct, the number was " + number;
     }
 
     // Fortune Teller
-    public static String fortune_teller(String input) {
+    public static String fortune_teller(String name) {
         String[] fortunes = {
                 "You're not successful unless you have a few haters.",
                 "Be present in the moment.", "Nothing is consistent but change.",
@@ -61,7 +40,7 @@ public class Games {
 
         int number = (int)(random.nextInt(fortunes.length));
 
-        return "Here is your fortune " + input + ":\n" + fortunes[number];
+        return "Here is your fortune " + name + ":\n" + fortunes[number];
     }
 
     // Madlibs

@@ -12,15 +12,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ((EditText) findViewById(R.id.editText4)).getText().clear();
+        ((EditText) findViewById(R.id.editText)).getText().clear();
+        ((EditText) findViewById(R.id.editText2)).getText().clear();
+
     }
 
     public void displayResult (View view) {
         Intent intent = new Intent (this, DisplayMessageActivity.class);
+        EditText name = (EditText) findViewById(R.id.editText4);
         EditText ht = (EditText) findViewById(R.id.editText);
         EditText wt = (EditText) findViewById(R.id.editText2);
+        String user = name.getText().toString();
         float height = Float.parseFloat(ht.getText().toString());
         float weight = Float.parseFloat(wt.getText().toString());
-        String message = BMICalc.calcultateBMI(height, weight);
+        String message = user + "'s BMI and Health Report\n\n" + BMICalc.calcultateBMI(height, weight);
         intent.putExtra("msg1", message);
         startActivity(intent);
     }

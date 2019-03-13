@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:text="Welcome to the BMI Calculator."
+        android:textColor="#0AF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        android:textColor="#0AF"/>
+        app:layout_constraintVertical_bias="0.1" />
 
     <EditText
         android:id="@+id/editText"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <EditText
         android:id="@+id/editText2"
@@ -53,25 +53,38 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0AF"
         android:onClick="displayResult"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
         android:text="Calculate"
         android:textAllCaps="false"
+        android:textColor="#FFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#FFF"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:background="#0AF"
-        />
+        app:layout_constraintVertical_bias="0.589" />
 
     <android.support.constraint.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textColor="#666"
+        android:hint="Name" />
 
 
 </android.support.constraint.ConstraintLayout>

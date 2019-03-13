@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:width="350dp"
         android:text="TextView"
+        android:textColor="#0AF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        android:textColor="#0AF" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -27,4 +27,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="20dp" />
+
 </android.support.constraint.ConstraintLayout>

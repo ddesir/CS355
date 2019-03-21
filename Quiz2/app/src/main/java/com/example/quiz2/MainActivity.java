@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import static com.example.quiz2.LoginManager.isKnownUser;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         String name = uname.getText().toString();
         String psswd = pword.getText().toString();
 
-        Boolean isValid = isKnownUser(name, psswd);
+        Boolean isValid = LoginManager.isKnownUser(name, psswd);
 
         if (isValid == true) {
             intent.putExtra("msg", "Welcome " + name);

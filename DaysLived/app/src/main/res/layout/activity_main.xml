@@ -37,9 +37,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="43dp"
-        android:text="Button"
+        android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2Pwd" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2Pwd"
+        android:textAllCaps="false"
+        android:onClick="displayCalcDaysLived"
+        android:background="@color/colorAccent"
+        android:textColor="#FFF"
+        android:textSize="24dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="20dp" />
 </android.support.constraint.ConstraintLayout>

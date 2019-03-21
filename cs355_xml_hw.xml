@@ -1,0 +1,47 @@
+<!--	Deon Desir
+		28 January 2019 
+		XML Intro			-->
+		
+<?xml version="1.0" encoding="UTF-8"?>
+
+<people>
+	<person>
+		<name>Joel</name>
+		<age>25</age>
+		<relationship>friend</relationship>
+		<occupation>student</occupation>
+		<hobby>computer games</hobby>
+	</person>
+	
+	<person>
+		<name>Jonathan</name>
+		<age>20</age>
+		<relationship>friend</relationship>
+		<occupation>student</occupation>
+		<hobby>joking</hobby>
+	</person>
+	
+	<person>
+		<name>Rasheed</name>
+		<age>30</age>
+		<relationship>friend</relationship>
+		<occupation>student</occupation>
+		<hobby>relaxing</hobby>
+	</person>
+	
+	<person>
+		<name>Deon</name>
+		<age>42</age>
+		<relationship>self</relationship>
+		<occupation>presentation specialist</occupation>
+		<hobby>movies</hobby>
+	</person>
+	
+	<person>
+		<name>Rosa</name>
+		<age>30</age>
+		<relationship>professor</relationship>
+		<occupation>teaching</occupation>
+		<hobby>unknown</hobby>
+	</person>
+</people>

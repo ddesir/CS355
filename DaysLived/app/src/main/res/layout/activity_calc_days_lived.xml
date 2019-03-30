@@ -13,55 +13,60 @@
         android:layout_marginTop="50dp"
         android:width="350dp"
         android:text="Choose your birthdate"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/colorPrimaryDark"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:calendarTextColor="@color/colorPrimaryDark"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:calendarTextColor="@color/colorPrimaryDark" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="31dp"
+        android:background="@color/colorAccent"
+        android:onClick="calculateDays"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
         android:text="Calculate Days Lived"
         android:textAllCaps="false"
+        android:textColor="#FFF"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/datePicker"
-        android:background="@color/colorAccent"
-        android:textColor="#FFF"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="5dp"
-        android:onClick="calculateDays"/>
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="212dp"
         android:width="350dp"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/colorPrimaryDark"/>
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 </android.support.constraint.ConstraintLayout>

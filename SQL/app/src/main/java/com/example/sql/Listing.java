@@ -27,7 +27,7 @@ public class Listing extends AppCompatActivity {
         ArrayList<String> values = queryDB(q);
 
         // Get ListView component and display the results of the query
-        ListView lv = (ListView) findViewById(R.id.listView);
+        ListView lv = (ListView)findViewById(R.id.listView);
         ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
         lv.setAdapter(adp);
     }
@@ -47,10 +47,8 @@ public class Listing extends AppCompatActivity {
                     String colvalue = cursor.getString(i);
                     data.append(colvalue);
                 }
-
                 list.add(data.toString());
             }
-
             cursor.close();
             db.close();
         } catch (Exception e) {

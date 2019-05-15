@@ -29,6 +29,7 @@ public class CalcDaysLived extends AppCompatActivity {
         int thisMonth = c.get(Calendar.MONTH) + 1;
         int thisYear = c.get(Calendar.YEAR);
 
+        // Date class from Geeks for Geeks
         GFG.Date dt1 = new GFG.Date(bDay, bMonth, bYear);
         GFG.Date dt2 = new GFG.Date(thisDay, thisMonth, thisYear);
         int lived = GFG.getDifference(dt1, dt2);

@@ -1,0 +1,21 @@
+CREATE TABLE Teams(team_name varchar(20) primary key, city);
+INSERT INTO Teams VALUES('Yankees','New York');
+INSERT INTO Teams VALUES('Mets','New York');
+INSERT INTO Teams VALUES('Red Sox','Boston');
+CREATE TABLE Players(
+id integer primary key autoincrement,
+Name varchar(40) not null,
+Age integer,
+Position varchar(20),
+team_name varchar(20));
+INSERT INTO Players VALUES(1,'Aaron James',26,'outfield','Yankees');
+INSERT INTO Players VALUES(2,'Giancarlo Stanton',29,'outfield','Yankees');
+INSERT INTO Players VALUES(3,'CC Sabathia',38,'pitcher','Yankees');
+INSERT INTO Players VALUES(4,'Curtis Granderson',38,'outfield','Mets');
+INSERT INTO Players VALUES(5,'Amed Rosario',23,'shortstop','Mets');
+INSERT INTO Players VALUES(6,'Robinson Can',36,'second base','Mets');
+INSERT INTO Players VALUES(7,'Mookie Betts',26,'outfielder','Red Sox');
+INSERT INTO Players VALUES(8,'Jackie Bradley',28,'centerfield','Red Sox');
+INSERT INTO Players VALUES(9,'Chris Young',35,'outfield','Red Sox');
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence VALUES('Players',9);

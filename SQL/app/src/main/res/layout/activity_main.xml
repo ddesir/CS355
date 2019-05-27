@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/allPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="makeQuery"
@@ -17,17 +17,31 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.307" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/yankees"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="makeQuery"
         android:text="Categories"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <Button
+        android:id="@+id/thirtyPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="makeQuery"
+        android:text="Over 30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
 </android.support.constraint.ConstraintLayout>

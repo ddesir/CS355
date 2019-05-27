@@ -14,11 +14,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void makeQuery (View view) {
-        Intent intent = new Intent(this, Listing.class);
-        if (view.equals(findViewById(R.id.button))) {
-            intent.putExtra("query", "SELECT categoryName, ProductName, UnitPrice FROM products, categories WHERE categories.categoryID=Products.categoryID ORDER BY categoryName;");
-        } else if (view.equals(findViewById(R.id.button2))) {
-            intent.putExtra("query", "SELECT categoryName, COUNT(ProductID) FROM products, categories WHERE categories.categoryID=Products.categoryID GROUP BY categoryName;");
+        Intent intent = new Intent(this, ShowResultsRecyclerView.class);
+        if (view.equals(findViewById(R.id.allPlayers))) {
+            intent.putExtra("query", "select Name, Age, Position, Players.team_name, City from Players, Teams where Players.teamID = Teams.ID;");
+        } else if (view.equals(findViewById(R.id.yankees))) {
+            intent.putExtra("query", "select Name, Age, Position, Players.team_name, City from Players, Teams where Players.teamID = 1 and Teams.ID = 1;");
+        } else if (view.equals(findViewById(R.id.thirtyPlus))) {
+            intent.putExtra("query", "select Name, team_name from Players where Age >= 30;");
         }
         startActivity(intent);
     }

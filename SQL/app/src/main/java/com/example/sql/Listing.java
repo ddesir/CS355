@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,17 +28,19 @@ public class Listing extends AppCompatActivity {
         // Query the DB and store the results in an ArrayList
         ArrayList<String> values = queryDB(q);
 
-        // Get ListView component and display the results of the query
-        ListView lv = (ListView)findViewById(R.id.listView);
-        ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
-        lv.setAdapter(adp);
+        // Get RecyclerView component and display the results of the query
+        RecyclerView rv = (RecyclerView) findViewById(R.id.listView);
+        // ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
+        ArrayList<String> adp
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.setAdapter(adp);
     }
 
     ArrayList<String> queryDB (String query) {
         ArrayList<String> list = new ArrayList<String>();
 
         try {
-            SQLiteDatabase db = openOrCreateDatabase("foodProducts.db", Context.MODE_PRIVATE, null);
+            SQLiteDatabase db = openOrCreateDatabase("players.db", Context.MODE_PRIVATE, null);
             Cursor cursor = db.rawQuery(query, null);
 
             while (cursor.moveToNext()) {
